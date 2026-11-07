@@ -1,60 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:gravity="center"
+    android:background="#FAF8F5"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="32dp">
 
-    <!-- Wadah Pembungkus Lingkaran -->
-    <FrameLayout
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/circle_logo_bg"
-        android:clipToOutline="true">
+    <!-- Spacer untuk mendorong konten ke tengah-bawah secara proporsional -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-        <!-- Gambar Logo -->
+    <!-- Wadah Pembungkus Lingkaran Logo dengan Bayangan -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="40dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="130dp"
+        app:cardElevation="12dp"
+        app:cardMaxElevation="16dp"
+        app:cardPreventCornerOverlap="true">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="Logo Kopi dan Nyemil"
+            android:padding="8dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/kopi"
-            android:contentDescription="Logo Kopi" />
-    </FrameLayout>
+            android:src="@drawable/iniloh"
+            tools:src="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
 
-    <!-- Judul Aplikasi -->
+    <!-- Judul Utama -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kopi dan Nyemil"
-        android:textColor="#000000"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.02"
+        android:text="Kopi &amp; Nyemil"
+        android:textColor="#2D1E18"
+        android:textSize="28sp" />
 
     <!-- Subtitle -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="60dp"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.04"
         android:text="Get a taste of your wish"
-        android:textColor="#888888"
+        android:textColor="#8C7A6B"
         android:textSize="15sp" />
 
-    <!-- Tombol Start Now (MaterialButton untuk bentuk melengkung/pill) -->
+    <!-- Spacer Bawah -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Tombol Aksi Utama -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnStart"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginHorizontal="16dp"
-        android:backgroundTint="#000000"
-        android:text="Start now"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-bold"
+        android:letterSpacing="0.05"
+        android:text="Start Now"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:cornerRadius="28dp" />
+        app:backgroundTint="#3D251E"
+        app:cornerRadius="30dp"
+        app:elevation="6dp"
+        app:rippleColor="#5A3A30" />
 
 </LinearLayout>

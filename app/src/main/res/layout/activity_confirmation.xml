@@ -8,19 +8,29 @@
     android:padding="24dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Halo Amry Musyaffa,"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:text="Halo ,Amry Musyaffa"
         android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold" />
 
-    <View
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/circle_ok_bg" />
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="60dp"
 
+        android:clipToOutline="true">
+
+
+        <!-- Gambar Logo -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kopikuy"
+            android:contentDescription="Logo Kopi" />
+    </FrameLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
